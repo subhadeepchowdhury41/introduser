@@ -1,0 +1,57 @@
+{
+  "info": {
+    "name": "Django Audio API",
+    "_postman_id": "your-postman-id",
+    "description": "Collection for Django Audio API"
+  },
+  "item": [
+    {
+      "name": "User Registration",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            { "key": "username", "value": "your_username" },
+            { "key": "email", "value": "your_email@example.com" },
+            { "key": "password", "value": "your_password" }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/auth/users/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["auth", "users"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Retrieve User",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer your_token"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8000/auth/users/me/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["auth", "users", "me"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
